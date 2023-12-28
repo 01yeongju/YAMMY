@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--결제 목록을 나타내는 xml 파일-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!--아래 나오는 정보가 결제 목록임을 나타내기 위한 텍스트뷰-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:text = "결제 목록" />
+
+    <!--결제 목록이 나타나는 실질적인 구간
+        데이터를 리스트뷰로 표헌-->
+    <ListView
+        android:id="@+id/payment_food_list"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"/>
+
+    <!--총 결제금액을 나타내기 위한 뷰그룹을 리니어 레이아웃으로 묶음-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        /-<!--오른쪽의 텍스트가 총 결제 금액임을 나타내기 위한 텍스트뷰-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:text = "총 결제 금액 : " />
+
+        <!--리스트뷰 나타나는 음식 가격의 총 합을 이 텍스트뷰에 셋팅-->
+        <TextView
+            android:id="@+id/payment_all_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:text = "" />
+    </LinearLayout>
+
+    <!--두 버튼을 수평배치하기 위해 리니어 레이아웃으로 묶음-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center">
+
+        <!--'더 담으러 가기' 버튼 클릭 시 이전 화면으로 넘어감-->
+        <Button
+            android:onClick="add_food"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="right"
+            android:backgroundTint="#0055FF"
+            android:text="더 담으러 가기" />
+
+        <!--'결제' 버튼 클릭 시 결제완료 창으로 넘어감-->
+        <Button
+            android:onClick="payment"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="right"
+            android:backgroundTint="#0055FF"
+            android:text="결제" />
+
+    </LinearLayout>
+
+</LinearLayout>

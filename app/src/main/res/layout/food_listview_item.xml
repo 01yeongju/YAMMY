@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--한식/양식에 대한 리스트뷰를 커스텀하는 xml 파일-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="145dp" >
+
+    <!--음식 사진이 들어갈 이미지뷰
+        부모레이아웃의 왼쪽에 위치-->
+    <ImageView
+        android:id="@+id/food_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="20dp" />
+
+    <!--음식 이름이 들어갈 텍스트뷰
+        이미지뷰와 상단을 맞추고 이미지뷰의 오른쪽에 위치-->
+    <TextView
+        android:id="@+id/food_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/food_image"
+        android:layout_toRightOf="@+id/food_image"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <!--음식 가격이 들어갈 텍스트뷰
+        이미지뷰의 오른쪽, 음식 이름 텍스트뷰의 아래에 위치-->
+    <TextView
+        android:id="@+id/food_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/food_name"
+        android:layout_toRightOf="@+id/food_image"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"
+        android:textSize="20dp"/>
+
+</RelativeLayout>

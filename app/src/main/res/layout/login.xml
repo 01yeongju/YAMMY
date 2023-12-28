@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--로그인 화면
+    뷰를 수직배치-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--앱로고 이미지를 넣을 레이아웃-->
+    <LinearLayout
+        android:id="@+id/logo"
+        android:orientation="horizontal"
+        android:layout_width="330dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp" >
+    </LinearLayout>
+
+    <!--아이디를 적을 에디트텍스트-->
+    <EditText
+        android:id="@+id/input_id"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:drawable/editbox_background"
+        android:hint="아이디를 입력하시오." />
+
+    <!--비밀번호를 적을 에디트텍스트-->
+    <EditText
+        android:id="@+id/input_pw"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="textPassword"
+        android:hint="비밀번호를 입력하시오." />
+
+    <!--두 버튼을 수평 배치하기 위해 리니어레이아웃으로 묶음-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="20dp">
+
+        <!--로그인 기능 버튼-->
+        <Button
+            android:onClick="login_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#0055FF"
+            android:text="로그인" />
+
+        <!--회원가입 기능 버튼-->
+        <Button
+            android:onClick="signup_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#0055FF"
+            android:text="회원가입" />
+
+    </LinearLayout>
+</LinearLayout>
+
+
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--옵션메뉴 안에 로그아웃이라는 아이템 추가-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/logout"
+        android:title="로그아웃" />
+</menu>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--회원가입 화면
+    뷰를 수직으로 중앙에 배치-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!--'이름' 텍스트가 보이는 텍스트뷰
+        아래의 edittext에 이름을 적으라고 알려주기 위함-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:text="이름" />
+
+    <!--회원가입 할 이름을 적을 edittext-->
+    <EditText
+        android:id="@+id/signup_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="실명으로 입력" />
+
+    <!--'아이디' 텍스트가 보이는 텍스트뷰
+        아래의 edittext에 원하는 아이디를 적으라고 알려주기 위함-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:text="아이디" />
+
+    <!--회원가입 할 아이디를 적을 edittext-->
+    <EditText
+        android:id="@+id/signup_id"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="4자 이상 입력" />
+
+    <!--'비밀번호' 텍스트가 보이는 텍스트뷰
+    아래의 edittext에 원하는 비밀번호를 적으라고 알려주기 위함-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:text="비밀번호" />
+
+    <!--회원가입 할 비밀번호를 적을 edittext-->
+    <EditText
+        android:id="@+id/signup_pw"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="4자 이상 입력" />
+
+    <!--사용자가 적은 정보를 넘겨줄 회원가입 버튼-->
+    <Button
+        android:onClick="signup_pass"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#0055FF"
+        android:text="회원가입" />
+
+</LinearLayout>
+
+
+
+

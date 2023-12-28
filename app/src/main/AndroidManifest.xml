@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Project"
+        tools:targetApi="31">
+        <activity
+            android:name=".login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <!--회원가입창을 나타내는 레이아웃에 대한 액티비티를 추가-->
+        <activity android:name=".signup" android:label="회원가입" />
+        <!--로그인을 했을 때 일반메뉴/금주의 백반 선택 레이아웃에 대한 액티비티를 추가-->
+        <activity android:name=".select_case" android:label="메인화면" />
+        <!--일반메뉴 목록을 나타내는 레이아웃에 대한 액티비티를 추가-->
+        <activity android:name=".general_menu" android:label="주문하기" />
+        <!--이 부분도 지워버리기!!!!!!!!!!!!!-->
+        <!--결제창을 나타내는 레이아웃에 대한 액티비티를 추가-->
+        <activity android:name=".payment" android:label="결제창" />
+        <!--후기창을 나타내는 레이아웃에 대한 액티비티를 추가-->
+        <activity android:name=".review_menu" android:label="리뷰창" />
+        <!--결제완료창을 나타내는 레이아웃에 대한 액티비티를 추가-->
+        <activity android:name=".finish" android:label="결제완료" />
+
+    </application>
+
+</manifest>

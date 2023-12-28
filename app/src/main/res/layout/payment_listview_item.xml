@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--결제창에 있는 리스트뷰를 커스텀하는 xml 파일-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:gravity="center">
+
+    <!--음식 이름을 나타내는 텍스트뷰
+        부모레이아웃의 왼쪽에 위치-->
+    <TextView
+        android:id="@+id/payment_food_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text=""/>
+
+    <!--오른쪽의 텍스트가 추가한 음식의 개수라는 것을 나타내기 위한 텍스트뷰-->
+    <TextView
+        android:id="@+id/payment_food_num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_food_name"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:text="수량 : "/>
+
+    <!--추가한 음식의 개수를 나타내는 텍스트뷰
+        음식 이름 텍스트뷰의 아래에 위치-->
+    <TextView
+        android:id="@+id/payment_food_num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_food_name"
+        android:layout_toRightOf="@+id/payment_food_num1"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:text=""/>
+
+    <!--오른쪽 텍스트가 개수에 따른 결제금액이라는 것을 나타내기 위한 텍스트뷰-->
+    <TextView
+        android:id="@+id/payment_food_price1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_food_name"
+        android:layout_toLeftOf="@+id/payment_food_price2"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:text="총 : "/>
+
+    <!--개수에 따른 결제금액을 나타내는 텍스트뷰
+    음식 이름 텍스트뷰의 아래에 위치-->
+    <TextView
+        android:id="@+id/payment_food_price2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_food_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:text=""/>
+</RelativeLayout>

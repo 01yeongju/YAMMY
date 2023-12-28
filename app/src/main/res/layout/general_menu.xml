@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--메뉴 주문 화면 : 뷰를 수직배치-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--버튼 2개를 수평을 배치하기 위해 리니어레이아웃으로 묶음-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp" >
+
+        <!--한식 메뉴를 나타내는 버튼-->
+        <Button
+            android:id="@+id/kor_food"
+            android:onClick="food_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#0055FF"
+            android:text="한식"/>
+
+        <!--양식 메뉴를 나타내는 버튼-->
+        <Button
+            android:id="@+id/wes_food"
+            android:onClick="food_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#0055FF"
+            android:text="양식"/>
+    </LinearLayout>
+
+    <!--한식과 양식 메뉴를 따로 따로 보이게 하기 위하여 프레임 레이아웃 사용-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="20dp">
+
+        <!--한식 버튼 클릭 시 나타나는 리스트뷰-->
+        <ListView
+            android:id="@+id/kor_food_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--양식 버튼 클릭 시 나타나는 리스트뷰-->
+        <ListView
+            android:id="@+id/wes_food_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!--주문서로 넘거가기 위한 버튼-->
+    <Button
+        android:onClick="payment_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="right"
+        android:backgroundTint="#0055FF"
+        android:text="주문서 보기"/>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--결제 완료 화면 : 뷰를 수직배치
+    배경이미지로 finish.png 사용-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/finish">
+
+    <!--결제완료 및 아래의 텍스트가 대기번호임을 나타내기 위한 텍스트-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop= "150dp"
+        android:textSize="25dp"
+        android:textColor="#345080"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="결제가 완료되었습니다.\n\n대기번호" />
+
+    <!--대기번호를 띄울 텍스트뷰-->
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="60dp"
+        android:textColor="#345080"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="" />
+
+    <!--메인 화면으로 돌아가기 위한 버튼-->
+    <Button
+        android:onClick="back_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#0055FF"
+        android:text="메인으로 돌아가기" />
+
+</LinearLayout>

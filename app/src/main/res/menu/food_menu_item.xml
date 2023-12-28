@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--한식과 양식 리스트를 담은 메뉴-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--한식 메뉴를 나타내는 아이템-->
+    <item
+        android:id="@+id/kor"
+        android:title="한식" >
+        <!--메뉴를 한번 더 작성함으로써 한식이라는 선택지에서 댜앙한 한식 메뉴 선택 가능-->
+        <menu>
+            <item
+                android:title="순두부찌개" />
+            <item
+                android:title="촌돼지김치찌개" />
+            <item
+                android:title="부대찌개" />
+            <item
+                android:title="고추장뚝배기불고기" />
+            <item
+                android:title="닭갈비덮밥" />
+            <item
+                android:title="제육덮밥" />
+
+        </menu>
+    </item>
+
+    <!--양식 메뉴를 나타내는 아이템-->
+    <item
+        android:id="@+id/wes"
+        android:title="양식" >
+        <!--한식과 마찬가지로 양식이라는 선택지에서 더 들어가, 댜앙한 양식 메뉴 선택 가능-->
+        <menu>
+            <item
+                android:title="직생돈+알밥" />
+            <item
+                android:title="직생돈+우동" />
+            <item
+                android:title="치즈돈까스+알밥" />
+            <item
+                android:title="치즈돈까스+우동" />
+            <item
+                android:title="치킨마요덮밥" />
+            <item
+                android:title="해장라면+공깃밥" />
+            <item
+                android:title="떡만두라면+공깃밥" />
+
+        </menu>
+    </item>
+
+</menu>

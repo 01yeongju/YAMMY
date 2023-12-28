@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--리뷰 작성을 위한 화면 : 세로 스크롤뷰 사용-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!--스크롤뷰는 하나의 뷰만 담을 수 있기 때문에 리니어 레이아웃으로 그룹화
+        수직 배치 이용-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--리뷰 등록할 메뉴를 선택하기 위한 버튼-->
+        <Button
+            android:id="@+id/food_menu_button"
+            android:onClick="food_menu"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="음식 이름" />
+
+        <!--음식에 만족하는지에 대한 설문 텍스트-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="만족하시나요?" />
+
+        <!--설문에 대한 대답을 라디오 버튼으로 구성
+            한번에 하나만 체크하기 위해 그룹으로 묶음-->
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--'만족' 텍스트를 나타내는 라디오버튼-->
+            <RadioButton
+                android:id="@+id/yes"
+                android:onClick="radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="만족"/>
+
+            <!--'보통' 텍스트를 나타내는 라디오버튼-->
+            <RadioButton
+                android:id="@+id/soso"
+                android:onClick="radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="보통"/>
+
+            <!--'불만족' 텍스트를 나타내는 라디오버튼-->
+            <RadioButton
+                android:id="@+id/no"
+                android:onClick="radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="불만족"/>
+        </RadioGroup>
+
+        <!--라디오 버튼 선택에 따라 달라지는 질문을 띄울 텍스트뷰-->
+        <TextView
+            android:id="@+id/check_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <!--라디오버튼에 따라 생기는 질문에 대합을 나타내는 체크버튼
+            수평배치를 위해 리니어 레이아웃 사용-->
+        <LinearLayout
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <!--'맛' 텍스트를 나타내는 체크박스-->
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="맛" />
+
+            <!--'양' 텍스트를 나타내는 체크박스-->
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="양" />
+
+            <!--'가격' 텍스트를 나타내는 체크박스-->
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가격" />
+        </LinearLayout>
+
+        <!--사용자로부터 후기를 받기 위한 텍스트뷰-->
+        <EditText
+            android:id="@+id/review_id"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="40dp"
+            android:padding="20dp"
+            android:background="@android:drawable/editbox_background"
+            android:hint="음식의 맛, 양, 가격 등 음식에 대한 솔직한 리뷰를 남겨주세요." />
+
+        <!--두개의 버튼을 수평배치하기 위한 리니어 레이아웃-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--카메라를 활용하여 사진첨부 기능을 가진 버튼-->
+            <Button
+                android:onClick="capture"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="사진 첨부하기" />
+
+            <!--작성한 리뷰를 등록할 버튼-->
+            <Button
+                android:onClick="review_up"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="리뷰 등록" />
+        </LinearLayout>
+
+        <!--찍은 이미지를 담을 이미지뷰-->
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:layout_margin="40dp" />
+    </LinearLayout>
+</ScrollView>

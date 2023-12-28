@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--메뉴 개수 선택 및 추가창 : 테이블 레이아웃으로 뷰 배치-->
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--1행 : 커스텀 대화상자의 기능이 개수선택임을 알리기 위한 텍스트뷰
+         requestFocus를 사용하여 포커스를 맞춤-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="개수 선택" >
+
+        <requestFocus/>
+    </TextView>
+
+    <!--2행 : 개수 증가/감소-->
+    <TableRow
+        android:gravity="center">
+        <!--개수 감소 버튼-->
+        <Button
+            android:id="@+id/decrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#0055FF"
+            android:text="-" />
+
+        <!--변화된 음식의 개수를 나타내기 위한 텍스트뷰-->
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:text="1" />
+
+        <!--개수 증가 버튼-->
+        <Button
+            android:id="@+id/increase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#0055FF"
+            android:text="+" />
+    </TableRow>
+
+    <!--3행 : 개수에 따른 음식의 가격을 나타냄-->
+    <TableRow
+        android:gravity="center">
+        <!--옆에 뜨는 텍스트가 가격임을 나타내기 위한 텍스트뷰-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:text="가격  = " />
+
+        <!--개수에 따라 변화되는 가격을 이 텍스트뷰에 셋팅-->
+        <TextView
+            android:id="@+id/all_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:text="" />
+    </TableRow>
+
+    <!--4행 : 메뉴 추가 또는 추가 취소-->
+    <TableRow
+        android:gravity="center">
+        <!--메뉴를 추가하지 않고 커스텀 대화상자를 없애기 위한 버튼-->
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#0055FF"
+            android:text="취소" />
+
+        <!--메뉴를 추가하기 위한 버튼-->
+        <Button
+            android:id="@+id/pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#0055FF"
+            android:text="추가" />
+    </TableRow>
+
+</TableLayout>
+
+
+
